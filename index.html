@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   
+   <title>Lista de Tarefas</title>
+</head>
+<body>
+   <div class="container">
+      <div class="title">
+         <h1>Lista de Tarefas</h1>
+         <h3>Adicione suas tarefas</h3>
+      </div>
+      <div class="input-section">
+         <input type="text" class="task-input" placeholder="Escreva sua tarefa aqui...">
+         <button class="add-task-button" onclick="addTask()">Adicionar tarefa</button>
+      </div>
+      <div class="tasks">
+         <ul class="task-list">
+            <!-- As tarefas serão adicionadas aqui -->
+             <li class="task">
+               <label class="label">Tarefa1</label>
+               <button class="x-btn" onclick="delTask()">X</button>
+            </li>
+             <li class="task">
+               <label class="label">Tarefa2</label>
+               <button class="x-btn" onclick="delTask()">X</button>
+            </li>
+             <li class="task">
+               <label class="label" onclick="checkTask()">Tarefa3</label>
+               <button class="x-btn" onclick="delTask()">X</button>
+            </li>
+         </ul>
+      </div>
+   </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
