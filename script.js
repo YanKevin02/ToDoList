@@ -1,6 +1,8 @@
 addEventListener('DOMContentLoaded', () => {
    localStorage.getItem('tasks');
    for (let i = 0; i < localStorage.length; i++) {
+      if (localStorage.key(i) === null) continue;
+
       const taskText = localStorage.key(i);
       const capitalizedTaskText = capitalize(taskText);
       const taskLi = document.createElement('li');
