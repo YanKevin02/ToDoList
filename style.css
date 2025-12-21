@@ -27,12 +27,6 @@ body{
    justify-content: center;
 }
 
-@media screen and (max-width: 640px){
-   .container{
-      margin: 20px;
-      width: auto;
-   }
-}
 
 .title{
    display: flex;
@@ -52,6 +46,35 @@ body{
    user-select: none;
    -moz-user-select: none;
    -ms-user-select: none;
+}
+
+@media screen and (max-width: 640px){
+   .container{
+      margin: 20px;
+      width: auto;
+   }
+
+   .input-section{
+      flex-direction: column;
+      gap: 15px;
+      margin: 30px;
+   }
+   .add-task-button, .task-input{
+      width: 100%;
+   }
+   .task-input{
+      padding: 15px;
+      font-size: 18px;
+   }
+   .add-task-button{
+      padding: 15px;
+      font-size: 18px;
+   }
+   .task{
+      gap: 15px;
+      padding: 15px;
+   }
+
 }
 
 .add-task-button, .task-input{
