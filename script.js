@@ -74,8 +74,11 @@ function delTask() {
 function toggleTaskCompletion(event) {
    if (event.target.classList.contains('label')) {
       event.target.classList.toggle('labelchecked');
+      localStorage.setItem(event.target.textContent, event.target.classList.contains('labelchecked') ? 'completed' : 'incomplete');
    } else {
       event.target.classList.remove('labelchecked');
+      localStorage.setItem(event.target.textContent, 'incomplete');
+      
    }
 }
 
