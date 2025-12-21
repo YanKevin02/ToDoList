@@ -1,7 +1,7 @@
 addEventListener('DOMContentLoaded', () => {
    localStorage.getItem('tasks');
    for (let i = 0; i < localStorage.length; i++) {
-      if (localStorage.key(i) === null) {
+      if (localStorage.length === 0) {
          continue;
       } else {
       const taskText = localStorage.key(i);
