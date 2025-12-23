@@ -27,7 +27,7 @@ addEventListener('DOMContentLoaded', () => {
       taskLi.appendChild(deleteBtn);
       document.querySelector('.task-list').appendChild(taskLi);
       
-      localStorage.removeItem("Counter");
+      localStorage.removeItem("Count");
    }
    }
 });
