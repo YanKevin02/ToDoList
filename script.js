@@ -1,6 +1,11 @@
 addEventListener('DOMContentLoaded', () => {
    localStorage.getItem('tasks');
    for (let i = 0; i < localStorage.length; i++) {
+      
+      if (localStorage.length == 0) {
+         break;
+      }
+
       if (localStorage.length != 0) {
       const taskText = localStorage.key(i);
       const capitalizedTaskText = capitalize(taskText);
@@ -9,6 +14,7 @@ addEventListener('DOMContentLoaded', () => {
       const taskLabel = document.createElement('label');
       taskLabel.classList.add('label');
       taskLabel.textContent = capitalizedTaskText;
+      
       if (localStorage.getItem(taskText) === 'completed') {
          taskLabel.classList.add('labelchecked');
       }
@@ -20,6 +26,8 @@ addEventListener('DOMContentLoaded', () => {
       taskLi.appendChild(taskLabel);
       taskLi.appendChild(deleteBtn);
       document.querySelector('.task-list').appendChild(taskLi);
+      
+      localStorage.removeItem("Counter");
    }
    }
 });
