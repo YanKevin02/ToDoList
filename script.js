@@ -27,11 +27,13 @@ addEventListener('DOMContentLoaded', () => {
       taskLi.appendChild(deleteBtn);
       document.querySelector('.task-list').appendChild(taskLi);
 
-      if (localStorage.getItem("Count")) {
-         localStorage.removeItem("Count");
+   }
+   if (localStorage.getItem("Count")) {
+      localStorage.removeItem("Count");
    }
    }
-}});
+   localStorage.removeItem("Count");
+});
 
 function addTask() {
    const taskInput = document.querySelector('.task-input');
