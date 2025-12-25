@@ -115,17 +115,15 @@ body{
 ul label{
    padding-bottom: 5px;
    font-weight: 500;
-   text-wrap: nowrap;
+   overflow-wrap: break-word;
    overflow: auto;
-   scrollbar-width: thin;
-   scrollbar-color: #888 transparent;
+   /* scrollbar-width: thin;
+   scrollbar-color: #888 transparent; */
    user-select: none;
    -moz-user-select: none;
    -ms-user-select: none;
-}
-
-.label{
    cursor: pointer;
+   
 }
 
 .label:hover{
@@ -135,23 +133,38 @@ ul label{
 }
 
 .label::before{
-   content: '📝 ';
+   content: '⬜ ';
+}
+
+.labelchecked::before{
+   content: '✅ ';
+   text-decoration: none;
+   text-decoration-skip-ink: spaces;
+   text-decoration-skip: spaces;
 }
 
 .labelchecked{
+   padding-bottom: 5px;
+   font-weight: 500;
    text-decoration: line-through;
-   color: grey;
+   text-decoration-skip-ink: spaces;
+   text-decoration-skip: spaces;
+   color: rgb(150, 150, 150);
+   overflow-wrap: break-word;
+   overflow: auto;
+   user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
    cursor: pointer;
 }
+
 .labelchecked:hover{
    color: rgb(109, 109, 109);
    font-weight: bold;
    transition: all 0.3s ease;
 }
 
-.labelchecked::before{
-   content: '📝 ';
-}
+
 
 .x-btn{
    background-color: red;
